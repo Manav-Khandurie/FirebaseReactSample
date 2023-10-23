@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth ,GoogleAuthProvider } from "firebase/auth";//Get Authentication 
 import { getFirestore } from "firebase/firestore"
  
+//Use process.env.API --> when in createReactApp
 const firebaseConfig = {
-    apiKey: "AIzaSyB60yaWiefovhGXYSSqMkhX8F9w951A0D0",
-    authDomain: "testproject-96e35.firebaseapp.com",
-    projectId: "testproject-96e35",
-    storageBucket: "testproject-96e35.appspot.com",
-    messagingSenderId: "44463037852",
-    appId: "1:44463037852:web:5bc68206f0ce7db3833c59",
-    measurementId: "G-LKKN1RY77E"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
   };//remove this
 
 // Initialize Firebase
