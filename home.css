@@ -1,0 +1,87 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, address {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style the sections */
+section {
+    padding: 2rem;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Style the address element */
+address {
+    font-style: normal;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 10px;
+    }
+}
