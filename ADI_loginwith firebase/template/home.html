@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .top {
+        --offset: 50px;
+
+        position: sticky;
+        bottom: 0px;
+        place-self: end;
+        margin-top: calc(100vh + var(--offset));
+
+        /* visual styling */
+        text-decoration: none;
+        padding: 10px;
+        font-family: sans-serif;
+        color: #fff;
+        background: #000000;
+        border-style: solid;
+        border-radius: 100px;
+        white-space: nowrap;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEST</title>
+
+    <!-- font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!-- JQuery CDN link -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navigation start -->
+    <nav>
+      <img src="/static/img/logo.png" class="logo" alt="" />
+
+      <div class="navigation">
+        <ul>
+          <i id="menu-close" class="fas fa-times"></i>
+          <li><a href="home.html" class="active">Home</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="courses.html">Notes</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <img src="/static/img/menu.png" id="menu-btn" alt="" />
+      </div>
+    </nav>
+    <!-- Navigation ends -->
+
+    <!-- Hero section starts from here -->
+    <section id="home">
+      <h2 style="font-size:60px">Welcome to NEST</h2>
+      <p style="font-size:15px"><b>
+        Help each other grow together.Let's help each other grow by learning from each other every day and chatting to answer any questions we have.
+      </b></p>
+      <div class="btn">
+        <a href="http://localhost:3000/" class="blue">CHAT NEST</a>
+        <a href="announcement.html" class="black"><b>Announcement</b></a>
+      </div>
+    </section>
+    <!-- Hero section ends from here -->
+
+    <!-- Features section starts from here -->
+    <section id="features">
+      <h1>Awesome Features</h1>
+      <p></p>
+
+      <div class="fea-base">
+        <div class="fea-box">
+          <i class="fa-solid fa-bell"></i>
+          <h3>Announcement</h3>
+          <p>
+            Provide all of the relevant details about the event, such as the date, time, location, and what attendees can expect.
+          </p>
+        </div>
+
+        <div class="fea-box">
+          <i class="fa-solid fa-book-bookmark"></i>
+          <h3>Notes Facility</h3>
+          <p>
+            All notes that are relevant to this topic accessible to you
+          </p>
+        </div>
+
+        <div class="fea-box">
+          <i class="fa-solid fa-user-plus"></i>
+          <h3>Chat with Birds</h3>
+          <p>
+            Students can chat with each other in academic and other problem-solving sessions.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Features section ends from here -->
+
+    <!-- Experts section starts from here -->
+    <section id="experts">
+      <h1>Community Experts</h1>
+      <p>Contact us with any problems.</p>
+      <div class="expert-box">
+        <div class="profile">
+          <img src="/static/img/pro1.png"width="250" height="250"  />
+          <h6>Ema Ernik</h6>
+          <p>Python & Algorithms Expert</p>
+          <div class="pro-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="/static/img/pro2.png" width="250" height="250" />
+          <h6>Jason chua</h6>
+          <p>Data Design Expert</p>
+          <div class="pro-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="/static/img/pro3.png" width="250" height="250" />
+          <h6>Maalik Halper</h6>
+          <p>Full Stack Developer</p>
+          <div class="pro-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="/static/img/pro4.png"  width="250" height="250"/>
+          <h6>Jennifer Lopez</h6>
+          <p>Design Expert</p>
+          <div class="pro-links">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experts section ends from here -->
+
+    <!-- Footer section starts from here -->
+    <footer>
+      <div class="footer-col">
+        <h3>Top Products</h3>
+        <li>Manage Reputation</li>
+        <li>Power Tools</li>
+        <li>Managed Website</li>
+        <li>Marketing Service</li>
+      </div>
+
+      <div class="footer-col">
+        <h3>Power Tools</h3>
+        <li>Jobs</li>
+        <li>Marketing Service</li>
+        <li>Top Products</li>
+        <li>Manage Reputation</li>
+      </div>
+
+      <div class="footer-col">
+        <h3>Power Tools</h3>
+        <li>Managed Website</li>
+        <li>Manage Reputation</li>
+        <li>Top Products</li>
+        <li>Marketing Service</li>
+      </div>
+
+      <div class="footer-col">
+        <h3>Guides</h3>
+        <li>Research</li>
+        <li>Experts</li>
+        <li>Managed Website</li>
+        <li>Marketing Service</li>
+      </div>
+
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p>You can trust us. we only send promo offers.</p>
+
+        <div class="subscribe">
+          <input type="email" placeholder="Your email Address" />
+          <a href="#" class="yellow">SUBSCRIBE</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <div class="pro-links">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i><br /><br />
+          <!-- scroll back to top -->
+          <a href="#" class="top">Back to Top &#8593;</a>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer section ends from here -->
+
+    <script>
+      // Show menu links on burger click
+      $("#menu-btn").click(function () {
+        $("nav .navigation ul").addClass("active");
+      });
+
+      // Hide navbar on click function
+      $("#menu-close").click(function () {
+        $("nav .navigation ul").removeClass("active");
+      });
+    </script>
+  </body>
+</html>
