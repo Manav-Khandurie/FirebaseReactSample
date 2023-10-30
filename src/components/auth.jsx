@@ -4,8 +4,8 @@ import { createUserWithEmailAndPassword , signInWithPopup , signOut} from "fireb
 
 export const Auth= ()=>{
 
-    const [email,setEmail]=useState("");
-    const [password ,setPassword]=useState("");
+    const [email,setEmail]=useState(" ");
+    const [password ,setPassword]=useState(" ");
 
     const handleSignIn=async ()=>{
         try{
