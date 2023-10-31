@@ -1,0 +1,17 @@
+# Use a lightweight Linux distribution as the base image
+FROM alpine:latest
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy the HTML file to the container
+COPY index.html .
+
+# Expose port 80 for the web server
+EXPOSE 80
+
+# Install a simple web server (in this case, using BusyBox's httpd)
+RUN apk add --no-cache busybox-extras
+
+# Command to start the web server serving the HTML file
+CMD ["httpd", "-f", "-p", "80", "-h", "/usr/src/app"]
