@@ -1,0 +1,55 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout your source code repository (e.g., Git)
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Install Node.js and npm
+                tools {
+                    nodejs "NodeJS"
+                }
+
+                // Install project dependencies
+                sh 'npm install'
+
+                // Build your Node.js application
+                sh 'npm run build'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests, e.g., using Mocha or Jest
+                sh 'npm test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy your application (e.g., push to a server or Docker registry)
+                // Example: Deploy to a remote server via SSH
+                sshagent(credentials: ['your-ssh-credentials']) {
+                    sh 'scp -r ./dist user@server:/path/to/deployment/directory'
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            // Notify on successful build
+            slackSend(channel: '#your-slack-channel', message: 'Build successful!')
+        }
+        failure {
+            // Notify on build failure
+            slackSend(channel: '#your-slack-channel', message: 'Build failed! Check Jenkins for details.')
+        }
+    }
+}
