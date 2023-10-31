@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  web:
+    image: node:14
+    container_name: web-app
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://dbuser:dbpassword@db:5432/mydb
+    command: ["npm", "start"]
+
+  db:
+    image: postgres:13
+    container_name: postgres-db
+    environment:
+      POSTGRES_USER: dbuser
+      POSTGRES_PASSWORD: dbpassword
+      POSTGRES_DB: mydb
