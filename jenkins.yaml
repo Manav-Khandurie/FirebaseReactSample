@@ -1,0 +1,42 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the source code from a version control system
+                git branch: 'main', url: 'https://github.com/yourusername/yourrepository.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build your project here (e.g., using Maven, Gradle, etc.)
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests for your application
+                sh 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deploy your application to a server or platform
+                sh 'bash deploy.sh'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Pipeline successfully completed'
+        }
+        failure {
+            echo 'Pipeline has failed'
+        }
+    }
+}
