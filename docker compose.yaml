@@ -1,0 +1,17 @@
+version: '3.8'  # Use the desired Docker Compose version
+
+services:
+  web:
+    image: nginx:latest  # Use the latest NGINX image from Docker Hub
+    ports:
+      - "80:80"  # Map port 80 on the host to port 80 in the container
+
+  db:
+    image: mysql:latest  # Use the latest MySQL image from Docker Hub
+    environment:
+      MYSQL_ROOT_PASSWORD: examplepassword
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: myappuser
+      MYSQL_PASSWORD: myapppassword
+
+  # Add more services as needed
